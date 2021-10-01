@@ -1,115 +1,83 @@
-function capturarDatos() {
-
-    let cantidaddedinero = 0,
-
-    cantidaddedinero = prompt("ingrese cantidad de dinero");
-
-    alert("Total es" + cantidaddedinero);
-
- public class main{
-
-    public static void{
-        while (true){
-            system.out.println("elige tu moneda");
-            system.out.println("1 - Dolar a peso colombiano\n"
-                    +"2 - Dolar a Euro\n"                                           
-                    +"3 - Dolar a Libra esterlina\n"
-                    +"4 - Peso Colombiano a Dolar\n"
-                    +"5 - Peso Colombiano a Euro\n"
-                    +"6 - Peso Colombiano a Libra esterlina\n"
-                    +"7 - Euro a Dolar\n"
-                    +"8 - Euro a Peso Colombiano\n"
-                    +"9 - Euro a Libra Esterlina\n"
-                    +"10 - Libra Esterlina a Dolar\n"
-                    +"11 - Libra Esterlina a Peso Colombiano\n" 
-                    +"12 - Libra Esterlina a Euro\n"
-                    +"13 - Salir");
-            system.out.println("moneda");
-            scanner leer = new scanner(system.in);
-            chart opcion = leer.next().charAt(0);
-
-            switch (opcion)
-        }
+function moneda()
+{
+    var valor=parseFloat(document.getElementById("cantidad").value);
+    var de=document.getElementById("de").value;
+    var a=document.getElementById("a").value;
+    var dolar=3813;
+    var euro=4492.11;
+    var libraesterlina=5266.67;
+    monto=0;
+    //peso a dolar
+    if(de==1&&a==2)
+    {
+        monto=valor/dolar;
     }
-    static void convertir(double valorDolar, string pais){
-    scanner leer = new scanner(system.in);
-    system.out.printf("ingrese la cantidad de %s :" , pais);
-    double cantidaMoneda = leer.nextDouble();
-
-    Double Dolares = cantidadMoneda / valorDolar;
-
-    public class main{
-        public static void main(string[] args) {
-            while (true){
-    }           system.out.println("elige tu moneda");
-    system.out.println("1 - Dolar a Peso Colombiano\n"
-            +"2 - Dolar a Euro\n"                                           
-            +"3 - Dolar a Libra esterlina\n"
-            +"4 - Peso Colombiano a Dolar\n"
-            +"5 - Peso Colombiano a Euro\n"
-            +"6 - Peso Colombiano a Libra esterlina\n"
-            +"7 - Euro a Dolar\n"
-            +"8 - Euro a Peso Colombiano\n"
-            +"9 - Euro a Libra Esterlina\n"
-            +"10 - Libra Esterlina a Dolar\n"
-            +"11 - Libra Esterlina a Peso Colombiano\n" 
-            +"12 - Libra Esterlina a Euro\n"
-            +"13 - Salir");
-    system.out.println("moneda");
-    scanner leer = new scanner(system.in);
-    chart opcion = leer.next().charAt(0);
-
-    switch (opcion){
-        case '1':
-            convertir(3813, "Peso Colombiano");
-            break;
-        case '2':
-            convertir(0.84888, "Euro");
-            break;
-        case '3':
-            convertir(0.72403, "Libra esterlina");
-            break;
-    
-        case '4':
-            convertir(0.00026, "Dolar");
-            break;
-        case '5':
-            convertir(0.00022, "Euro");
-            break;
-        case '6':
-            convertir(0.00019, "Libra esterlina");
-            break;
-
-        case '7':
-            convertir(1.17787, "Dolar");
-            break;
-        case '8':
-            convertir(4492.11, "Euro");
-            break;
-        case '9':
-            convertir(0.85284, "Libra esterlina");
-            break;
-
-        case '10':
-            convertir(1.38097, "Dolar");
-            break;
-        case '11':
-            convertir(5266.67, "Euro");
-            break;
-        case '12':
-            convertir(1.1723, "Libra esterlina");
-            break;
-
-        case '13':
-            system.out.println("cerrando programa");
-            break;
-        }    
+    //peso a euro
+    else if(de==1&&a==3)
+    {
+        monto=valor/euro;
+    }
+    //peso a libra esterlina
+    else if(de==1&&a==4)
+    {
+        monto=valor/libraesterlina;
     }
 
-
-   
-}
+    // dolar a peso
+    else if(de==2&&a==1)
+    {
+        monto=valor*dolar;
     }
-console.log(cantidaddedinero,eligetumoneda)
+    // dolar a euro
+    else if(de==2&&a==3)
+    {   
+        monto=valor*(dolar/euro);
+    }
+    // dolar a libra esterlina
+    else if(de==2&&a==4)
+    {   
+        monto=valor*(dolar/libraesterlina);
+    }
+
+     // Euro a peso
+     else if(de==3&&a==1)
+     {   
+        monto=valor*euro;
+     }
+      // Euro a dolar
+      else if(de==3&&a==2)
+      {   
+        monto=valor*(euro/dolar);
+      }
+      // Euro a libra esterlina
+      else if(de==3&&a==4)
+      {   
+        monto=valor*(euro/libraesterlina);
+      }
+
+      // libra esterlina a peso
+      else if(de==4&&a==1)
+      {   
+        monto=valor*libraesterlina;
+      }
+       // libra esterlina a dolar
+       else if(de==4&&a==2)
+       {   
+        monto=valor*(libraesterlina/dolar);
+       }
+       // libra esterlina a euro
+       else if(de==4&&a==3)
+       {   
+        monto=valor*(libraesterlina/euro);
+       }
+       // peso a peso. dolar a dolar, euro a euro, libra a libra
+       else{
+           monto=valor;
+       }
+       
+       document.getElementById("monto").innerHTML="Monto: $"+monto.toFixed(2);
+
+      
 
 
+}   

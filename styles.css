@@ -1,4 +1,20 @@
-.principal{
-    text-align: justify;
-    margin: 20px;
+body{
+
+display: flex;
+justify-content: center;
+text-align: center; width: 50%; padding-left: 20%; 
+
+}
+    
+div{
+
+border: 3px solid #80a93e31;
+width: 600px;
+
+background-color: #f5980c96;
+background-blend-mode: hard-light;
+font-weight: bold;
+font-size: 15pt;
+padding:  2 2 2px;
+
 }
